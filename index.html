@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
+    <style>
+        html{ 
+            scroll-behavior: smooth;
+        }
+        body{
+            width: 98vw;
+            height: 100vh;
+            background-color: rgb(237, 237, 237);
+
+        }
+        .header{
+            position: fixed;
+            top: 0px;
+            display: flex;
+            justify-content: space-around;
+            width: 97%;
+            text-decoration: none;
+            background-color: white;
+            padding: 20px;
+        }
+        .profile{
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+        }
+        .menu{
+            display: flex;
+            gap: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+        }
+        .profile_container{
+            padding-left: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .name{
+            margin-left: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+        .details{
+            padding-top: 150px;
+            padding-bottom: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-image: url("portfolio.jpg");
+            color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+        }
+        .profile_intro,.details_icons{
+            margin-top: 30px;
+        }
+        .details_icons{
+            display: flex;
+            flex-direction: column;
+            margin-left: 5px;
+            font-size: 25px;
+        }
+        .profile_intro{
+            text-align: center;
+            padding-right: 350px;
+            width: 840px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .name_intro{
+            font-size: 50px;
+        }
+        .linkedin,.github,.gitlab,.twitter,.instagram{
+            border: 1px solid white;
+            padding: 15px
+        }
+        .twitter,.gitlab{
+            width: 22px;
+        }
+        .intro_para{
+            font-size: 22px;
+        }
+        .project_button{
+            width: 240px;
+            height: 70px;
+            border-radius: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .about,.projects{
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: larger;
+        }
+        .about{
+            padding-top: 130px;
+        }
+        .projects{
+            padding-top: 130px;
+        }
+        .about_me_para{
+            width: 60%;
+            justify-self: center;
+            color: rgb(109, 109, 109);
+        }
+        .about_info{
+         display: flex;
+         gap: 70px;   
+            margin-left: 150px;
+        }
+        .get_to_know_me{
+            flex: 1;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #777;
+        }
+        .gtkm_contact{
+            width: 24%;
+            height: 24%;
+            background-color: rgb(0, 103, 239);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            font-weight: 600;
+            border: 0px;
+            border-radius: 5px;
+            font-size: 19px;
+        }
+        .my_skills{
+            flex: 1;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .skills{
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 50% 50%;
+            padding-right: 200px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .html{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .css{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        .java{
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+        .python{
+            grid-column: 4/5;
+            grid-row: 1/2;
+        }
+        .sql{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .powerbi{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .msexcel{
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+        .canva{
+            grid-column: 4/5;
+            grid-row: 2/3;
+        }
+        .html,.css,.sql,.python,.powerbi,.msexcel,.canva,.java{
+            padding: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: fit-content;
+            font-size: 15px;
+            background: rgba(153, 153, 153, 0.2);
+            border-radius: 5px;
+            font-weight: 600;
+            color: #777;
+        }
+        .project_1,.project_2,.project_3{
+            display: flex;
+            align-items: center;
+            padding-left: 90px;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            gap: 40px;
+        }
+        .project1_img,.project2_img,.project3_img{
+            flex: 1;
+            height: 420px;
+        }
+        .project1_description,.project2_description,.project3_description{
+            flex: 1;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .project1_image,.project2_image,.project3_image{
+            padding-left: 40px;
+            height: 420px;
+            width: 700px;
+        }
+        .project_heading{
+            font-size: 30px;
+        }
+        .project_para{
+            width: 550px;
+            font-size: 20px;
+            color: #777;
+        }
+        .project_button{
+            background-color: rgb(0, 103, 239);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            height: 60px;
+            width: 35%;
+            font-weight: 600;
+            border: 0px;
+            border-radius: 5px;
+            font-size: 19px;
+        }
+        .project_button:hover{
+            background-color: rgb(0, 85, 196);
+        }
+        .submit_button:hover{
+            background-color: rgb(0,85,196);
+        }
+        .contact{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-image: url("portfolio.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+        .form{
+            justify-items: left;
+            background-color: white;
+            color: #686868;
+            font-weight: 800;
+            border-radius: 5px;
+            width: 50%;
+            padding: 20px;
+            font-size: 15px;
+        }
+        .contact_heading{
+            justify-items: center;
+        }
+        .submit_button{
+            margin: 40px 0px 20px 20px;
+            display: block;
+            background-color: rgb(0, 103, 239);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            font-weight: 700;
+            border: 0px;
+            border-radius: 5px;
+            font-size: 15px;
+            padding: 20px 65px 20px 65px;
+            justify-self: right;
+        }
+        .input_name,.input_email,.input_message{
+            background-color: rgb(218, 218, 218);
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 20px;
+            font-weight: 700;
+            width: 308%;
+        }
+        .input_message{
+            height: 200px;
+            place-self: top;
+        }
+        .input_email,.input_message,.input_name:read-write{
+            border: white;
+        }
+        .footer{
+            background-color: black;
+            padding-top: 1px;
+            color: white;
+        }
+        .footer_container{
+            padding: 80px 180px 80px 180px;
+            display: flex;
+            justify-content: space-between;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .icons_footer{
+            width: 15%;
+        }
+        .footer_icons_div{
+            display: flex;
+            gap: 20px;
+            font-size: 20px;
+        }
+        .menu1:link{
+            text-decoration: none;
+        }
+        .ppp{
+            margin-bottom:35px;
+            font-size:18px;
+        }
+        @media(max-width: 600px){
+            .profile{
+                margin: 0px;
+                padding: 0px;
+                width: 20px;
+                height: 20px;
+            }
+            .gtkm_contact{
+                width: 80%;
+                height: 10%;
+            }
+            .project_1,.project_2,.project_3{
+                display: flex;
+                flex-direction: column;
+            }
+            .header{
+                position: sticky;
+            }
+            .profile_container{
+                
+                padding: 5px 50px 0px 0px;  
+            }
+            .menu{
+                display: flex;
+                flex-direction: row;
+                padding-right: 100px;
+                gap: 10px;
+            }
+            .menu1{
+                font-size: 7px;
+            }
+            .github,.gitlab,.linkedin,.twitter,.instagram{
+                font-size: 15px;
+                width: 13px;
+                padding: 10px; 
+                height: 13px;
+            }
+            .profile_intro{
+                padding-right: 0px
+            }
+            .input_email,.input_message,.input_name{
+                width: 165px;
+            }
+            .footer{
+                padding-right: 160px;
+            }
+            .name{
+                font-size: 12px;
+                padding-bottom: 5px;
+            }
+            .name_intro{
+                font-size: 20px;
+            }
+            .intro_para{
+                font-size: 12px;
+                width: 300px;
+                padding-left: 60px;
+            }
+            .details{
+                height: 0px;
+                padding-right: 30px;
+            }
+            .project_button{
+                font-size: 10px;
+                width: 90px;
+                height: 30px;
+            }
+            .about{
+                padding-top: 0px;
+            }
+            .about_h1{
+                font-size: 20px;
+            }
+            .about_me_para{
+                text-align: center;
+                font-size: 12px;
+            }
+            .about_info{
+                display: inline;
+            }
+            .get_to_know_me{
+                text-align: center;
+            }
+            .gettoknowme{
+                font-size: 20px;
+            }
+            .ppp{
+                justify-self: center;
+                width: 310px;
+                font-size: 12px;
+                margin: 10px;
+            }
+            .gtkm_contact{
+                width: 90px;
+                height: 30px;
+                font-size: 12px;
+            }
+            .my_skills{
+                display: flex;
+                flex-direction: column;
+            }
+            .my_skills_text{
+                text-align: center;
+            }
+            .skills{
+                padding-left: 45px;
+                margin: auto;
+                gap: 5px;
+            }
+            .html,.css,.java,.sql,.powerbi,.canva,.python,.msexcel{
+                width: 50px;
+                text-align: center;
+                border-radius: 20px;
+                margin-bottom: 0px;
+            }
+            .projects{
+                padding-top: 0px;
+            }
+            .project1_description,.project2_description,.project3_description{
+                text-align: center;
+                width: 70vw;
+            }
+            .projects_h1{
+                font-size: 22px;
+            }
+            .project_2,.project_1,.project_3{
+                padding: 0px;
+            }
+            .project1_image,.project2_image,.project3_image{
+                width: 400px;
+                height: 200px;
+                padding: 0px;
+            }
+            .project_heading{
+                font-size: 18px;
+                text-align: center;
+                width: 80vw;
+                margin: auto;
+            }
+            .project_para{
+                display: contents;
+                text-align: center;
+                font-size: 15px;
+                width: 70vw;
+                margin: auto;
+            }
+            .footer_container{
+                display: flex;
+                padding: 10px;
+                gap: 10px;
+            }
+            .project_button{
+                display: block;
+                justify-self: center;
+                margin-top: 30px;
+            }
+            .name_footer{
+                font-size: 1.3vh;
+            }
+            .icons_footer{
+                font-size: 1.3vh;
+            }
+            .footer_icons_div{
+                font-size: 15px;
+            }
+            .footer_name_para{
+                width: 50vw;
+            }
+            .form{
+                justify-self: center;
+                width: 70vw;
+            }
+            .input_name,.input_email,.input_message{
+                width: 63vw;
+            }
+            .submit_button{
+                padding: 0px;
+                width: 100px;
+                height: 30px;
+                margin: 25px 0px 0px 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header home" >
+        <div class="profile_container">
+            <div><img class="profile" src="profile.jpg" alt=""></div>
+            <div class="name"><strong>BANDI CHIRANJEEVI</strong></div>
+        </div>
+        <div class="menu">
+            <a href="#home" class="menu1"><h2>HOME</h2></a>
+            <a href="#about" class="menu1"><h2>ABOUT</h2></a>
+            <a href="#projects" class="menu1"><h2>PROJECTS</h2></a>
+            <a href="#contact" class="menu1"><h2>CONTACT</h2></a>
+        </div>
+    </div>
+    <div class="details" id="home">
+        <div class="details_icons">
+            <a href="https://www.linkedin.com/in/bandi-chiranjeevi-52404822a/" target="_blank"><i class="fa fa-linkedin linkedin" style="color: white;"></i></a>
+            <a href="https://github.com/chiranjeevibandi" target="_blank"><i class="fa fa-github github" style="color: white;"></i></a>
+            <a href="https://x.com/CHIRU6303988750?t=LFlMN7D2LTASpIgTd_YwrQ&s=08" target="_blank"><i class="fa fa-twitter twitter" style="color: white;"></i></a>
+            <a href="https://gitlab.com/chiranjeevibandi29" target="_blank"><i class="fa fa-gitlab gitlab" style="color: white;"></i></a>
+            <a href="https://www.instagram.com/iam_chiranjeevi_?igsh=MWc5amU0cXo3ZGxmYw==" target="_blank"><i class="fa fa-instagram instagram" style="color: white;"></i></a>
+        </div>
+        <div class="profile_intro">
+            <h1 class="name_intro">
+                HEY, MY NAME IS B CHIRANJEEVI
+            </h1>
+            <p class="intro_para">A focused front-end developer ready to put my skills to the test. I am passionate about creating user-friendly and visually appealing interfaces.</p>
+           <a href="#projects"><button class="project_button">PROJECTS</button> </a>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <h1 class="about_h1">ABOUT ME</h1>
+        <hr width="30px" style="height: 4px; background-color:rgb(0, 89, 255); border-radius:30px">
+        <p class="about_me_para">A focused front-end developer ready to put my skills to the test. I am passionate about creating user-friendly and visually appealing interfaces.</p>
+    </div>
+    <div class="about_info">
+        <div class="get_to_know_me">
+            <h2 style="color: black;margin-bottom:30px" class="gettoknowme">Get to know me!</h2>
+            <p class="ppp">Hey! It's <b>B Chiranjeevi</b> and I'm a <b>Frontend Web Developer</b> lives in Hyderabad.I've done several projects using front-end technoliges like <b>HTML and CSS</b>. </p>
+            <p class="ppp" >I like discovering and exploring applications on the web.And ready to learn new things.</p>
+            <a href="#contact"><button class="gtkm_contact"> CONTACT </button></a>
+        </div>
+        <div class="my_skills">
+            <h2 class="my_skills_text">My Skills</h2>
+            <div class="skills">
+                <div class="html">HTML</div>
+                <div class="css">CSS</div>
+                <div class="java">Java</div>
+                <div class="python">Python</div>
+                <div class="sql">SQL</div>
+                <div class="powerbi">PowerBI</div>
+                <div class="msexcel">MsExcel</div>
+                <div class="canva">Canva</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="projects" id="projects">
+        <h1 class="projects_h1">PROJECTS</h1>
+        <hr width="30px" style="height: 4px; background-color:rgb(0, 89, 255); border-radius:30px">
+        <p class="about_me_para">Below are my works which I've made using front-end technologies like HTML and CSS.</p>
+    </div>
+
+
+    <div class="project_2">
+        <div class="project2_img">
+            <img src="project_portfolio.jpg" alt="Image not loaded" width="413px" height="260px" class="project2_image">
+        </div>
+        <div class="project2_description">
+            <h3 class="project_heading">1.My Personal Portfolio</h3>
+            <p class="project_para">This is my personal <strong>portfolio</strong> tells about me and my works.
+                And also anyone can contact with me using this portfolio
+            </p>
+            <button class="project_button">CASE STUDY</button>
+        </div>
+    </div>
+
+
+    <div class="project_1">
+        <div class="project1_img"> 
+            <img src="project_minor.jpg" alt="Image not loaded" width="413px" height="260px" class="project1_image">
+        </div>
+        <div class="project1_description">
+            <h3 class="project_heading">2.Software Vulnerability Detection Tool Using Machine Learning Algorithms</h3>
+            <p class="project_para">By using machine learning algorithms, leveraging
+                ensemble methods to predict and classify vulnerabilities
+               in a file with high accuracy.</p>
+               <p class="project_para">Improved detection accuracy by 20% using machine
+                learning ensemble methods.</p>
+                <button class="project_button">CASE STUDY</button>
+        </div>
+    </div>
+
+
+    <div class="project_3">
+        <div class="project3_img">
+            <img src="project_touristplaces.jpg" alt="Image not loaded" width="413px" height="260px" class="project3_image">
+        </div>
+        <div class="project3_description">
+            <h3 class="project_heading">3.Historic Places</h3>
+            <p class="project_para">Historic places webpage includes <strong>the best historic places in India</strong>. Which is developed using front-end technologies like HTML and CSS.
+            </p>
+            <button class="project_button">CASE STUDY</button>
+        </div>
+    </div>
+
+
+    <div class="contact" id="contact" style="padding-top: 120px;">
+        <div class="contact_heading">
+        <h1 style="font-size: 40px;">CONTACT</h1>
+        <hr width="30px" style="height: 4px; background-color:rgb(255, 255, 255); border-radius:30px">
+        <p>You can contact and text with me using the below form..</p>
+        </div>
+        <div class="form">
+            <p>Name</p>
+            <input class="input_name" type="text" placeholder="Enter Your Name">
+            <p>Email</p>
+            <input class="input_email" type="text" placeholder="Enter Your Email">
+            <p>Message</p>
+            <input class="input_message" type="text" placeholder="Enter Your Message">
+            <button type="submit" class="submit_button">SUBMIT</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="name_footer">
+                <h2>BANDI CHIRANJEEVI</h2>
+                <p style="color: #cbcbcb;" class="footer_name_para">A dynamic tech enthusiast, transforming data into innovation with precision and passion.</p>
+            </div>
+            <div class="icons_footer">
+                <h2>SOCIAL</h2>
+                <div class="footer_icons_div">
+                    <a href="https://www.linkedin.com/in/bandi-chiranjeevi-52404822a/" target="_blank"><i class="fa fa-linkedin" style="color: white;"></i></a>
+                    <a href="https://github.com/chiranjeevibandi" target="_blank"><i class="fa fa-github " style="color: white;"></i></a>
+                    <a href="https://x.com/CHIRU6303988750?t=LFlMN7D2LTASpIgTd_YwrQ&s=08" target="_blank"><i class="fa fa-twitter " style="color: white;"></i></a>
+                    <a href="https://gitlab.com/chiranjeevibandi29" target="_blank"><i class="fa fa-gitlab " style="color: white;"></i></a>
+                    <a href="https://www.instagram.com/iam_chiranjeevi_?igsh=MWc5amU0cXo3ZGxmYw==" target="_blank"><i class="fa fa-instagram" style="color: white;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
