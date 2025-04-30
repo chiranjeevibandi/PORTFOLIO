@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Portfolio</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         html{ 
             scroll-behavior: smooth;
         }
@@ -88,6 +92,7 @@
             font-size: 22px;
         }
         .project_button{
+            margin-top: 20px;
             width: 240px;
             height: 70px;
             border-radius: 10px;
@@ -191,7 +196,7 @@
             flex: 1;
             color: black;
             font-weight: bold;
-            font-size: 25px;
+            font-size: 17px;
             font-weight: bold;
             margin-left: 20px;
             
@@ -202,7 +207,7 @@
             margin-top: 8%;
             gap: 15px;
         }
-        .project_1,.project_2,.project_3{
+        .project_1,.project_2,.project_3,.project_4{
             display: flex;
             align-items: center;
             padding-left: 90px;
@@ -211,15 +216,15 @@
             margin-bottom: 20px;
             gap: 40px;
         }
-        .project1_img,.project2_img,.project3_img{
+        .project1_img,.project2_img,.project3_img,.project4_img{
             flex: 1;
             height: 420px;
         }
-        .project1_description,.project2_description,.project3_description{
+        .project1_description,.project2_description,.project3_description,.project4_description{
             flex: 1;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-        .project1_image,.project2_image,.project3_image{
+        .project1_image,.project2_image,.project3_image,.project4_image{
             padding-left: 40px;
             height: 420px;
             width: 700px;
@@ -229,6 +234,7 @@
         }
         .project_para{
             width: 550px;
+            padding: 20px;
             font-size: 20px;
             color: #777;
         }
@@ -340,12 +346,9 @@
                 width: 80%;
                 height: 10%;
             }
-            .project_1,.project_2,.project_3{
+            .project_1,.project_2,.project_3,.project_4{
                 display: flex;
                 flex-direction: column;
-            }
-            .header{
-                position: sticky;
             }
             .profile_container{
                 
@@ -426,20 +429,27 @@
                 height: 30px;
                 font-size: 12px;
             }
-            .my_skills{
+            .myskills{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                flex: 1;
+                color: black;
+                font-size: 10px;
+                font-weight: bold;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            .skills{
+                font-size: 15px;
                 display: flex;
-                flex-direction: column;
+                flex-wrap: wrap;
+                margin-top: 8%;
+                gap: 15px;
+                width: fit-content;
             }
             .my_skills_text{
                 text-align: center;
             }
-            .skills{
-                padding-left: 45px;
-                margin: auto;
-                gap: 5px;
-            }
             .html,.css,.java,.sql,.powerbi,.canva,.python,.msexcel{
-                width: 50px;
                 text-align: center;
                 border-radius: 20px;
                 margin-bottom: 0px;
@@ -447,17 +457,17 @@
             .projects{
                 padding-top: 0px;
             }
-            .project1_description,.project2_description,.project3_description{
+            .project1_description,.project3_description,.project2_description,.project4_description{
                 text-align: center;
                 width: 70vw;
             }
             .projects_h1{
                 font-size: 22px;
             }
-            .project_2,.project_1,.project_3{
+            .project_2,.project_1,.project_3,.project_4{
                 padding: 0px;
             }
-            .project1_image,.project2_image,.project3_image{
+            .project1_image,.project2_image,.project3_image,.project4_image{
                 width: 400px;
                 height: 200px;
                 padding: 0px;
@@ -538,35 +548,37 @@
             <h1 class="name_intro">
                 HEY, MY NAME IS B CHIRANJEEVI
             </h1>
-            <p class="intro_para">A focused front-end developer ready to put my skills to the test. I am passionate about creating user-friendly and visually appealing interfaces.</p>
+            <p class="intro_para">A focused <strong>java full-stack developer</strong> ready to put my skills to the test. I am passionate about creating responsive, user-friendly and visually appealing interfaces.</p>
            <a href="#projects"><button class="project_button">PROJECTS</button> </a>
         </div>
     </div>
     <div class="about" id="about">
         <h1 class="about_h1">ABOUT ME</h1>
         <hr width="30px" style="height: 4px; background-color:rgb(0, 89, 255); border-radius:30px">
-        <p class="about_me_para">A focused front-end developer ready to put my skills to the test. I am passionate about creating user-friendly and visually appealing interfaces.</p>
+        <p class="about_me_para">A focused <strong>java full-stack developer</strong> developer ready to put my skills to the test. I am passionate about creating user-friendly and visually appealing interfaces.</p>
     </div>
     <div class="about_info">
         <div class="get_to_know_me">
             <h2 style="color: black;margin-bottom:30px" class="gettoknowme">Get to know me!</h2>
-            <p class="ppp">Hey! It's <b>B Chiranjeevi</b> and I'm a <b>Frontend Web Developer</b> lives in Hyderabad.I've done several projects using front-end technoliges like <b>HTML and CSS</b>. </p>
-            <p class="ppp" >I like discovering and exploring applications on the web.And ready to learn new things.</p>
+            <p class="ppp">Hey! It's <b>B Chiranjeevi</b> and I'm a <b>Java Full Stack Developer</b> lives in Hyderabad.I've done several projects using front-end technoliges like <b>HTML, CSS, BootStrap and JavaScript</b>. </p>
+            <p class="ppp" >I like discovering and exploring applications and new technologies on the web & ready to learn new things.</p>
             <a href="#contact"><button class="gtkm_contact"> CONTACT </button></a>
         </div>
         <div class="myskills">
             <h2 class="my_skills_text" style="font-size: 25px;">My Skills</h2>
             <div class="skills">
-                <div class="html"  style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">HTML</div>
-                <div class="css" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">CSS</div>
-                <div class="java" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">JavaScript</div>
-                <div class="java" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">BootStrap</div>
-                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">ReactJS</div>
-                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">MERN Stack</div>
-                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">Java</div>
-                <div class="sql" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">Python</div>
-                <div class="powerbi" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">SQL</div>
-                <div class="canva" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">Canva</div>
+                <div class="html"  style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">HTML</div>
+                <div class="css" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">CSS</div>
+                <div class="java" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: gray;font-weight:700">JavaScript</div>
+                <div class="java" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: gray;font-weight:700">BootStrap</div>
+                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: gray;font-weight:700">ReactJS</div>
+                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;color: gray;font-weight:700">MERN Stack</div>
+                <div class="canva" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">NodeJS</div>
+                <div class="canva" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">MongoDB</div>
+                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: gray;font-weight:700">Java</div>
+                <div class="sql" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">Python</div>
+                <div class="powerbi" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">GitHub</div>                
+                <div class="powerbi" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">SQL</div>                
             </div>
         </div>
     </div>
@@ -586,9 +598,22 @@
         <div class="project2_description">
             <h3 class="project_heading">1.My Personal Portfolio</h3>
             <p class="project_para">This is my personal <strong>portfolio</strong> tells about me and my works.
-                And also anyone can contact with me using this portfolio
-            </p>
+                And also anyone can contact with me using this portfolio. using HTML, CSS, CSS-Flex, CSS-Grid, media queries.</p>
             <a href=""><button class="project_button">GO LIVE</button></a>
+        </div>
+    </div>
+
+
+    <div class="project_4">
+        <div class="project4_img">
+            <img src="project_ebook.jpg" alt="Image not loaded" width="413px" height="260px" class="project4_image">
+        </div>
+        <div class="project4_description">
+            <h3 class="project_heading">2.E-Book Website</h3>
+            <p class="project_para">This is <strong>E-Book Website</strong>
+                , which is developed using HTML, CSS, CSS-Flex, CSS-Grid, media queries.It is a static website which shows my Front-end skills.
+            </p>
+            <a href="https://golden-pudding-84bd5f.netlify.app/" target="_blank"><button class="project_button">GO LIVE</button></a>
         </div>
     </div>
 
@@ -598,13 +623,13 @@
             <img src="project_minor.jpg" alt="Image not loaded" width="413px" height="260px" class="project1_image">
         </div>
         <div class="project1_description">
-            <h3 class="project_heading">2.Software Vulnerability Detection Tool Using Machine Learning Algorithms</h3>
+            <h3 class="project_heading">3.Software Vulnerability Detection Tool Using Machine Learning Algorithms</h3>
             <p class="project_para">By using machine learning algorithms, leveraging
                 ensemble methods to predict and classify vulnerabilities
                in a file with high accuracy.</p>
                <p class="project_para">Improved detection accuracy by 20% using machine
                 learning ensemble methods.</p>
-                <a href=""><button class="project_button">GO LIVE</button></a>
+                <a href="https://drive.google.com/file/d/10GKtWcEfBnh5KIdzRG3rpl-nqxPXu6pM/view?usp=sharing" target="_blank"><button class="project_button">VIEW DOCUMENTATION</button></a>
         </div>
     </div>
 
@@ -614,9 +639,9 @@
             <img src="project_touristplaces.jpg" alt="Image not loaded" width="413px" height="260px" class="project3_image">
         </div>
         <div class="project3_description">
-            <h3 class="project_heading">3.Historic Places</h3>
+            <h3 class="project_heading">4.Historic Places</h3>
             <p class="project_para">Historic places webpage includes <strong>the best historic places in India</strong>. Which is developed using front-end technologies like HTML and CSS.</p>
-            <a href=""><button class="project_button">GO LIVE</button></a>
+            <a href="https://historicalplacesinind.netlify.app/" target="_blank"><button class="project_button">GO LIVE</button></a>
         </div>
     </div>
 
@@ -625,7 +650,7 @@
         <div class="contact_heading">
         <h1 style="font-size: 40px;">CONTACT</h1>
         <hr width="30px" style="height: 4px; background-color:rgb(255, 255, 255); border-radius:30px">
-        <p>You can contact and text with me using the below form..</p>
+        <p style="margin: 15px;">You can send me your message via <strong>E-mail</strong> using the below form...</p>
         </div>
         <form action="https://formspree.io/f/xpwdqkoj" method="POST" class="form">
             <p>Name</p>
