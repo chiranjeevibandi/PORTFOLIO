@@ -132,7 +132,7 @@
             border-radius: 5px;
             font-size: 19px;
         }
-        .my_skills{
+       /* .my_skills{
             flex: 1;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
@@ -185,6 +185,22 @@
             border-radius: 5px;
             font-weight: 600;
             color: #777;
+        }*/
+        .myskills{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            flex: 1;
+            color: black;
+            font-weight: bold;
+            font-size: 25px;
+            font-weight: bold;
+            margin-left: 20px;
+            
+        }
+        .skills{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 8%;
+            gap: 15px;
         }
         .project_1,.project_2,.project_3{
             display: flex;
@@ -281,6 +297,8 @@
         .input_message{
             height: 200px;
             place-self: top;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         .input_email,.input_message,.input_name:read-write{
             border: white;
@@ -536,17 +554,19 @@
             <p class="ppp" >I like discovering and exploring applications on the web.And ready to learn new things.</p>
             <a href="#contact"><button class="gtkm_contact"> CONTACT </button></a>
         </div>
-        <div class="my_skills">
-            <h2 class="my_skills_text">My Skills</h2>
+        <div class="myskills">
+            <h2 class="my_skills_text" style="font-size: 25px;">My Skills</h2>
             <div class="skills">
-                <div class="html">HTML</div>
-                <div class="css">CSS</div>
-                <div class="java">Java</div>
-                <div class="python">Python</div>
-                <div class="sql">SQL</div>
-                <div class="powerbi">PowerBI</div>
-                <div class="msexcel">MsExcel</div>
-                <div class="canva">Canva</div>
+                <div class="html"  style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">HTML</div>
+                <div class="css" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">CSS</div>
+                <div class="java" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">JavaScript</div>
+                <div class="java" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">BootStrap</div>
+                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">ReactJS</div>
+                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">MERN Stack</div>
+                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">Java</div>
+                <div class="sql" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">Python</div>
+                <div class="powerbi" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">SQL</div>
+                <div class="canva" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;font-weight:700">Canva</div>
             </div>
         </div>
     </div>
@@ -568,7 +588,7 @@
             <p class="project_para">This is my personal <strong>portfolio</strong> tells about me and my works.
                 And also anyone can contact with me using this portfolio
             </p>
-            <a href="https://splendorous-pasca-e4b888.netlify.app/"><button class="project_button">GO LIVE</button></a>
+            <a href=""><button class="project_button">GO LIVE</button></a>
         </div>
     </div>
 
@@ -584,7 +604,7 @@
                in a file with high accuracy.</p>
                <p class="project_para">Improved detection accuracy by 20% using machine
                 learning ensemble methods.</p>
-                <button class="project_button">GO LIVE</button>
+                <a href=""><button class="project_button">GO LIVE</button></a>
         </div>
     </div>
 
@@ -595,9 +615,8 @@
         </div>
         <div class="project3_description">
             <h3 class="project_heading">3.Historic Places</h3>
-            <p class="project_para">Historic places webpage includes <strong>the best historic places in India</strong>. Which is developed using front-end technologies like HTML and CSS.
-            </p>
-            <button class="project_button">GO LIVE</button>
+            <p class="project_para">Historic places webpage includes <strong>the best historic places in India</strong>. Which is developed using front-end technologies like HTML and CSS.</p>
+            <a href=""><button class="project_button">GO LIVE</button></a>
         </div>
     </div>
 
@@ -608,15 +627,19 @@
         <hr width="30px" style="height: 4px; background-color:rgb(255, 255, 255); border-radius:30px">
         <p>You can contact and text with me using the below form..</p>
         </div>
-        <div class="form">
+        <form action="https://formspree.io/f/xpwdqkoj" method="POST" class="form">
             <p>Name</p>
-            <input class="input_name" type="text" placeholder="Enter Your Name">
+            <input required class="input_name" type="text" name="name" placeholder="Enter Your Name">
+            
             <p>Email</p>
-            <input class="input_email" type="text" placeholder="Enter Your Email">
+            <input required class="input_email" type="email" name="email" placeholder="Enter Your Email">
+            
             <p>Message</p>
-            <input class="input_message" type="text" placeholder="Enter Your Message">
+            <textarea required class="input_message" name="message" placeholder="Enter Your Message"></textarea>
+            
             <button type="submit" class="submit_button">SUBMIT</button>
-        </div>
+        </form>
+        
     </div>
     <footer class="footer">
         <div class="footer_container">
