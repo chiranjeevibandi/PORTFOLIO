@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Portfolio</title>
     <style>
@@ -17,7 +18,7 @@
             width: 98vw;
             height: 100vh;
             background-color: rgb(237, 237, 237);
-
+        
         }
         .header{
             position: fixed;
@@ -35,10 +36,30 @@
             border-radius: 25px;
         }
         .menu{
+            align-items: center;
             display: flex;
             gap: 25px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 14px;
+        }
+        .menu1{
+            color: rgb(0, 47, 255);
+        }
+        .home_hover:hover{
+            transform: scale(1.2);
+            color: red;
+        }
+        .about_hover:hover{
+            color: red;
+            transform: scale(1.2);
+        }
+        .projects_hover:hover{
+            transform: scale(1.2);
+            color: red;
+        }
+        .contact_hover:hover{
+            color: red;
+            transform: scale(1.2);
         }
         .profile_container{
             padding-left: 40px;
@@ -85,6 +106,17 @@
             border: 1px solid white;
             padding: 15px
         }
+        .icon_hover:hover{
+            margin: 13px;
+            background-color: rgb(24, 113, 0);
+            transform: scale(1.1);
+            border-radius: 10px;
+        }
+        
+        .linkedin1:hover{
+            -webkit-text-stroke: 1% rgb(0, 0, 0);
+            transform: scale(1.8);
+        }
         .twitter,.gitlab{
             width: 22px;
         }
@@ -99,6 +131,9 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 20px;
             font-weight: bolder;
+        }
+        .projectsbutton{
+            margin-right: 20px;
         }
         .about,.projects{
             text-align: center;
@@ -137,60 +172,12 @@
             border-radius: 5px;
             font-size: 19px;
         }
-       /* .my_skills{
-            flex: 1;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        .gtkm_contact:hover{
+            transform: scale(1.1);
+            border-radius: 15px;
+            font-size:23px;
+            background-color: rgb(24, 113, 0);
         }
-        .skills{
-            display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            grid-template-rows: 50% 50%;
-            padding-right: 200px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        .html{
-            grid-column: 1/2;
-            grid-row: 1/2;
-        }
-        .css{
-            grid-column: 2/3;
-            grid-row: 1/2;
-        }
-        .java{
-            grid-column: 3/4;
-            grid-row: 1/2;
-        }
-        .python{
-            grid-column: 4/5;
-            grid-row: 1/2;
-        }
-        .sql{
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
-        .powerbi{
-            grid-column: 2/3;
-            grid-row: 2/3;
-        }
-        .msexcel{
-            grid-column: 3/4;
-            grid-row: 2/3;
-        }
-        .canva{
-            grid-column: 4/5;
-            grid-row: 2/3;
-        }
-        .html,.css,.sql,.python,.powerbi,.msexcel,.canva,.java{
-            padding: 20px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            width: fit-content;
-            font-size: 15px;
-            background: rgba(153, 153, 153, 0.2);
-            border-radius: 5px;
-            font-weight: 600;
-            color: #777;
-        }*/
         .myskills{
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             flex: 1;
@@ -250,10 +237,11 @@
             font-size: 19px;
         }
         .project_button:hover{
-            background-color: rgb(0, 85, 196);
-        }
-        .submit_button:hover{
-            background-color: rgb(0,85,196);
+            transition: width 2s;
+            transform: scale(1.1);
+            border-radius: 10px;
+            font-size:23px;
+            background-color: rgb(24, 113, 0);
         }
         .contact{
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -291,6 +279,13 @@
             font-size: 15px;
             padding: 20px 65px 20px 65px;
             justify-self: right;
+        }
+        .submit_button:hover{
+            transition:  height 2s;
+            transform: scale(1.1);
+            background-color: rgb(24, 113, 0);
+            color: white;
+            font-size: 18px;
         }
         .input_name,.input_email,.input_message{
             background-color: rgb(218, 218, 218);
@@ -336,11 +331,17 @@
             font-size:18px;
         }
         @media(max-width: 600px){
+            button{
+                text-decoration: none;
+            }
+            .details{
+                padding-top: 200px;
+            }
             .profile{
                 margin: 0px;
                 padding: 0px;
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
             }
             .gtkm_contact{
                 width: 80%;
@@ -351,7 +352,6 @@
                 flex-direction: column;
             }
             .profile_container{
-                
                 padding: 5px 50px 0px 0px;  
             }
             .menu{
@@ -359,6 +359,22 @@
                 flex-direction: row;
                 padding-right: 100px;
                 gap: 10px;
+            }
+            .home_hover:hover{
+                transform: scale(1.2);
+                color: red;
+            }
+            .about_hover:hover{
+                color: red;
+                transform: scale(1.2);
+            }
+            .projects_hover:hover{
+                transform: scale(1.2);
+                color: red;
+            }
+            .contact_hover:hover{
+                color: red;
+                transform: scale(1.2);
             }
             .menu1{
                 font-size: 7px;
@@ -368,6 +384,16 @@
                 width: 13px;
                 padding: 10px; 
                 height: 13px;
+            }
+            .icon_hover:hover{
+                margin: 5px;
+                background-color: rgb(24, 113, 0);
+                transform: scale(1.1);
+                border-radius: 10px;
+            }
+            .linkedin1:hover{
+                -webkit-text-stroke: 1px black;
+                transform: scale(1.8);
             }
             .profile_intro{
                 padding-right: 0px
@@ -399,6 +425,16 @@
                 width: 90px;
                 height: 30px;
             }
+            
+        .project_button:hover{
+            transition: width 2s;
+            transform: scale(1.1);
+            border-radius: 15px;
+            font-size: 10px;
+        }
+            .projectsbutton{
+                margin-left: 20px;
+            }
             .about{
                 padding-top: 0px;
             }
@@ -427,6 +463,9 @@
             .gtkm_contact{
                 width: 90px;
                 height: 30px;
+                font-size: 10px;
+            }
+            .gtkm_contact:hover{
                 font-size: 12px;
             }
             .myskills{
@@ -439,7 +478,7 @@
                 font-weight: bold;
             }
             .skills{
-                font-size: 15px;
+                font-size: 11px;
                 display: flex;
                 flex-wrap: wrap;
                 margin-top: 8%;
@@ -514,11 +553,25 @@
             .input_name,.input_email,.input_message{
                 width: 63vw;
             }
+            /* .https://bchiranjeevi-portfolioo.netlify.app/ */
+            .input_message{
+                height: 15vh;
+            }
+            a{
+                text-decoration: none;
+            }
             .submit_button{
                 padding: 0px;
                 width: 100px;
                 height: 30px;
                 margin: 25px 0px 0px 0px;
+            }
+            .submit_button:hover{
+                transition:  height 2s;
+                transform: scale(1.1);
+                background-color: rgb(24, 113, 0);
+                color: white;
+                font-size: 16px;
             }
         }
     </style>
@@ -530,26 +583,28 @@
             <div class="name"><strong>BANDI CHIRANJEEVI</strong></div>
         </div>
         <div class="menu">
-            <a href="#home" class="menu1"><h2>HOME</h2></a>
-            <a href="#about" class="menu1"><h2>ABOUT</h2></a>
-            <a href="#projects" class="menu1"><h2>PROJECTS</h2></a>
-            <a href="#contact" class="menu1"><h2>CONTACT</h2></a>
+            <a href="#home" class="menu1"><h2 class="home_hover">HOME</h2></a>
+            <a href="#about" class="menu1"><h2 class="about_hover">ABOUT</h2></a>
+            <a href="#projects" class="menu1"><h2 class="projects_hover">PROJECTS</h2></a>
+            <a href="#contact" class="menu1"><h2 class="contact_hover">CONTACT</h2></a>
         </div>
     </div>
     <div class="details" id="home">
         <div class="details_icons">
-            <a href="https://www.linkedin.com/in/bandi-chiranjeevi-52404822a/" target="_blank"><i class="fa fa-linkedin linkedin" style="color: white;"></i></a>
-            <a href="https://github.com/chiranjeevibandi" target="_blank"><i class="fa fa-github github" style="color: white;"></i></a>
-            <a href="https://x.com/CHIRU6303988750?t=LFlMN7D2LTASpIgTd_YwrQ&s=08" target="_blank"><i class="fa fa-twitter twitter" style="color: white;"></i></a>
-            <a href="https://gitlab.com/chiranjeevibandi29" target="_blank"><i class="fa fa-gitlab gitlab" style="color: white;"></i></a>
-            <a href="https://www.instagram.com/iam_chiranjeevi_?igsh=MWc5amU0cXo3ZGxmYw==" target="_blank"><i class="fa fa-instagram instagram" style="color: white;"></i></a>
+            <a href="https://www.linkedin.com/in/bandi-chiranjeevi-52404822a/" target="_blank"><i class="fa fa-linkedin linkedin icon_hover" style="color: white;"></i></a>
+            <a href="https://github.com/chiranjeevibandi" target="_blank"><i class="fa fa-github github icon_hover" style="color: white;"></i></a>
+            <a href="https://x.com/CHIRU6303988750?t=LFlMN7D2LTASpIgTd_YwrQ&s=08" target="_blank"><i class="fa fa-twitter twitter icon_hover" style="color: white;"></i></a>
+            <a href="https://gitlab.com/chiranjeevibandi29" target="_blank"><i class="fa fa-gitlab gitlab icon_hover" style="color: white;"></i></a>
+            <a href="https://www.instagram.com/iam_chiranjeevi_?igsh=MWc5amU0cXo3ZGxmYw==" target="_blank"><i class="fa fa-instagram instagram icon_hover" style="color: white;"></i></a>
         </div>
         <div class="profile_intro">
             <h1 class="name_intro">
                 HEY, MY NAME IS B CHIRANJEEVI
             </h1>
             <p class="intro_para">A focused <strong>java full-stack developer</strong> ready to put my skills to the test. I am passionate about creating responsive, user-friendly and visually appealing interfaces.</p>
-           <a href="#projects"><button class="project_button">PROJECTS</button> </a>
+           <a href="#projects"><button class="project_button projectsbutton" >🔧PROJECTS</button> </a>
+            <a href="/resume.pdf" target="_blank"><button class="project_button" >📄MY RESUME</button></a>
+            <!-- <a href="https://drive.google.com/file/d/1ykdATa4SKTjJ5leqEVs3aGRKksiK94k6/preview" target="_blank"><button class="project_button" style="">📄RESUME</button></a> -->
         </div>
     </div>
     <div class="about" id="about">
@@ -562,10 +617,10 @@
             <h2 style="color: black;margin-bottom:30px" class="gettoknowme">Get to know me!</h2>
             <p class="ppp">Hey! It's <b>B Chiranjeevi</b> and I'm a <b>Java Full Stack Developer</b> lives in Hyderabad.I've done several projects using front-end technoliges like <b>HTML, CSS, BootStrap and JavaScript</b>. </p>
             <p class="ppp" >I like discovering and exploring applications and new technologies on the web & ready to learn new things.</p>
-            <a href="#contact"><button class="gtkm_contact"> CONTACT </button></a>
+            <a href="#contact"><button class="gtkm_contact">📞CONTACT </button></a>
         </div>
         <div class="myskills">
-            <h2 class="my_skills_text" style="font-size: 25px;">My Skills</h2>
+            <h2  class="my_skills_text" style="font-size: 25px;">My Skills</h2>
             <div class="skills">
                 <div class="html"  style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">HTML</div>
                 <div class="css" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">CSS</div>
@@ -599,7 +654,7 @@
             <h3 class="project_heading">1.My Personal Portfolio</h3>
             <p class="project_para">This is my personal <strong>portfolio</strong> tells about me and my works.
                 And also anyone can contact with me using this portfolio. using HTML, CSS, CSS-Flex, CSS-Grid, media queries.</p>
-            <a href=""><button class="project_button">GO LIVE</button></a>
+            <a href=""><button class="project_button">🚀 GO LIVE</button></a>
         </div>
     </div>
 
@@ -613,7 +668,7 @@
             <p class="project_para">This is <strong>E-Book Website</strong>
                 , which is developed using HTML, CSS, CSS-Flex, CSS-Grid, media queries.It is a static website which shows my Front-end skills.
             </p>
-            <a href="https://golden-pudding-84bd5f.netlify.app/"><button class="project_button">GO LIVE</button></a>
+            <a href="https://golden-pudding-84bd5f.netlify.app/" target="_blank"><button class="project_button">🚀 GO LIVE</button></a>
         </div>
     </div>
 
@@ -629,7 +684,7 @@
                in a file with high accuracy.</p>
                <p class="project_para">Improved detection accuracy by 20% using machine
                 learning ensemble methods.</p>
-                <a href="https://drive.google.com/file/d/10GKtWcEfBnh5KIdzRG3rpl-nqxPXu6pM/view?usp=sharing"><button class="project_button">VIEW DOCUMENTATION</button></a>
+                <a href="/documentation.pdf" target="_blank"><button class="project_button">📄VIEW DOCUMENTATION</button></a>
         </div>
     </div>
 
@@ -641,7 +696,7 @@
         <div class="project3_description">
             <h3 class="project_heading">4.Historic Places</h3>
             <p class="project_para">Historic places webpage includes <strong>the best historic places in India</strong>. Which is developed using front-end technologies like HTML and CSS.</p>
-            <a href="https://historicalplacesinind.netlify.app/"><button class="project_button">GO LIVE</button></a>
+            <a href="https://historicalplacesinind.netlify.app/" target="_blank"><button class="project_button">🚀 GO LIVE</button></a>
         </div>
     </div>
 
@@ -650,7 +705,7 @@
         <div class="contact_heading">
         <h1 style="font-size: 40px;">CONTACT</h1>
         <hr width="30px" style="height: 4px; background-color:rgb(255, 255, 255); border-radius:30px">
-        <p style="margin: 15px;">You can send me your message via <strong>E-mail</strong> using the below form...</p>
+        <p style="margin: 15px;">You can send me your message via <strong>📩E-mail</strong> using the below form...</p>
         </div>
         <form action="https://formspree.io/f/xpwdqkoj" method="POST" class="form">
             <p>Name</p>
@@ -662,7 +717,7 @@
             <p>Message</p>
             <textarea required class="input_message" name="message" placeholder="Enter Your Message"></textarea>
             
-            <button type="submit" class="submit_button">SUBMIT</button>
+            <button type="submit" class="submit_button">📤SUBMIT</button>
         </form>
         
     </div>
@@ -675,11 +730,11 @@
             <div class="icons_footer">
                 <h2>SOCIAL</h2>
                 <div class="footer_icons_div">
-                    <a href="https://www.linkedin.com/in/bandi-chiranjeevi-52404822a/" target="_blank"><i class="fa fa-linkedin" style="color: white;"></i></a>
-                    <a href="https://github.com/chiranjeevibandi" target="_blank"><i class="fa fa-github " style="color: white;"></i></a>
-                    <a href="https://x.com/CHIRU6303988750?t=LFlMN7D2LTASpIgTd_YwrQ&s=08" target="_blank"><i class="fa fa-twitter " style="color: white;"></i></a>
-                    <a href="https://gitlab.com/chiranjeevibandi29" target="_blank"><i class="fa fa-gitlab " style="color: white;"></i></a>
-                    <a href="https://www.instagram.com/iam_chiranjeevi_?igsh=MWc5amU0cXo3ZGxmYw==" target="_blank"><i class="fa fa-instagram" style="color: white;"></i></a>
+                    <a href="https://www.linkedin.com/in/bandi-chiranjeevi-52404822a/" target="_blank" class="linkedin1"><i class="fa fa-linkedin" style="color: white;"></i></a>
+                    <a href="https://github.com/chiranjeevibandi" target="_blank"><i class="fa fa-github linkedin1" style="color: white;"></i></a>
+                    <a href="https://x.com/CHIRU6303988750?t=LFlMN7D2LTASpIgTd_YwrQ&s=08" target="_blank"><i class="fa fa-twitter linkedin1" style="color: white;"></i></a>
+                    <a href="https://gitlab.com/chiranjeevibandi29" target="_blank"><i class="fa fa-gitlab linkedin1" style="color: white;"></i></a>
+                    <a href="https://www.instagram.com/iam_chiranjeevi_?igsh=MWc5amU0cXo3ZGxmYw==" target="_blank"><i class="fa fa-instagram linkedin1" style="color: white;"></i></a>
                 </div>
             </div>
         </div>
