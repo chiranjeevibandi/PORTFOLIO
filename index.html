@@ -46,7 +46,6 @@
             gap: 25px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 14px;
-            transition: all 0.3s ease;
         }
         .menu_mobile{
             display: none;
@@ -56,18 +55,22 @@
         }
         .home_hover:hover{
             transform: scale(1.2);
+            transition: all 0.3s ease;
             color: red;
         }
         .about_hover:hover{
             color: red;
+            transition: all 0.3s ease;
             transform: scale(1.2);
         }
         .projects_hover:hover{
             transform: scale(1.2);
+            transition: all 0.3s ease;
             color: red;
         }
         .contact_hover:hover{
             color: red;
+            transition: all 0.3s ease;
             transform: scale(1.2);
         }
         .profile_container{
@@ -164,17 +167,18 @@
         .about_me_para{
             width: 60%;
             justify-self: center;
-            color: rgb(109, 109, 109);
+            color: black;
         }
         .about_info{
          display: flex;
          gap: 70px;   
-            margin-left: 150px;
+        margin-left: 150px;
+        margin-bottom: 100px;
         }
         .get_to_know_me{
             flex: 1;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: #777;
+            color: black;
         }
         .gtkm_contact{
             width: 24%;
@@ -194,50 +198,53 @@
             font-size:23px;
             background-color: rgb(24, 113, 0);
         }
+
         .education-section {
-            scroll-margin-top: 110px;
-            margin-top: 60px;
+            margin:auto;
+            scroll-margin-top: 100px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: larger;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             display: flex;
             flex-direction: column;
             gap: 20px;
-            justify-content: center;
-            align-items: center;
-        }
-        .education_inner_section{
-            display: flex;
-            justify-content: space-between;
-        }
-        .year{
-            color: rgb(104, 104, 104);
+            max-width: 75%;
+            background-color: rgb(245, 245, 245);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .education-item {
-            color: black;
-            background-color: #f4f4f4;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            width: 50%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
 
-        .education-item h3 {
-            margin-top: 0;
-            font-size: 1.2em;
-        }
+    .edu-card h3 {
+      color: #34495e;
+      margin-bottom: 0.3rem;
+    }
 
-        .education-item p {
-            font-size: 1em;
-            color: #555;
-        }
-        .education-item:hover{
-            transform: scale(1.02);
-        }
+    .edu-card .college {
+      font-weight: 500;
+      color: #555;
+    }
+
+    .edu-card .duration {
+      color: #888;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .edu-card ul {
+      list-style: disc;
+      padding-left: 1.2rem;
+      color: #333;
+    }
+
+    .edu-card ul li {
+      margin-bottom: 0.3rem;
+      line-height: 1.6;
+    }
         .projects{
             scroll-margin-top: 90px;
             padding-top: 30px;
+            margin-top: 30px;
             margin-bottom: 20px;
         }
         .myskills{
@@ -298,7 +305,7 @@
             width: 550px;
             padding: 20px;
             font-size: 20px;
-            color: #777;
+            color: black;
         }
         .project_button{
             background-color: rgb(0, 103, 239);
@@ -332,7 +339,7 @@
         .form{
             justify-items: left;
             background-color: white;
-            color: #686868;
+            color: black;
             font-weight: 800;
             border-radius: 5px;
             width: 50%;
@@ -426,6 +433,33 @@
                 width: 80%;
                 height: 10%;
             }
+
+            .education-section {
+                width: 80%;
+                margin: auto;
+                padding: 1.5rem;
+      }
+
+      .education-section h1 {
+        font-size: 1.6rem;
+      }
+
+      .edu-card h3 {
+        font-size: 1rem;
+      }
+
+      .edu-card .college{
+        font-size: 0.9rem;
+      }
+      .edu-card .duration {
+        font-size: 0.7rem;
+      }
+
+      .edu-card ul {
+        font-size: 0.9rem;
+        padding-left: 1.2rem;
+      }
+
             .project_1,.project_2,.project_3,.project_4{
                 display: flex;
                 flex-direction: column;
@@ -444,6 +478,7 @@
                 font-weight: 700;
             }
             .menu_mobile:hover{
+                transition: all 0.3s ease;
                 transform: scale(1.2);
                 color: red;
             }
@@ -553,7 +588,7 @@
                 font-size: 11px;
                 display: flex;
                 flex-wrap: wrap;
-                
+                margin-bottom: 30px;
                 gap: 15px;
                 width: fit-content;
             }
@@ -714,7 +749,7 @@
         </div>
     </div>
     <div class="about" id="about">
-        <h1 class="about_h1">ABOUT ME</h1>
+        <h1 class="about_h1">👨‍💻ABOUT ME</h1>
         <hr width="30px" style="height: 4px; background-color:rgb(0, 89, 255); border-radius:30px">
         <p class="about_me_para">A focused <strong>java full-stack developer</strong> developer ready to put my skills to the test. I am passionate about creating user-friendly and visually appealing interfaces.</p>
     </div>
@@ -728,54 +763,43 @@
         <div class="myskills">
             <h2  class="my_skills_text" style="font-size: 25px;">My Skills</h2>
             <div class="skills">
-                <div class="html"  style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">HTML</div>
-                <div class="css" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">CSS</div>
-                <div class="java" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: gray;font-weight:700">JavaScript</div>
-                <div class="java" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: gray;font-weight:700">BootStrap</div>
-                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: gray;font-weight:700">ReactJS</div>
-                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;color: gray;font-weight:700">MERN Stack</div>
-                <div class="canva" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">NodeJS</div>
-                <div class="canva" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">MongoDB</div>
-                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: gray;font-weight:700">Java</div>
-                <div class="sql" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">Python</div>
-                <div class="powerbi" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">GitHub</div>                
-                <div class="powerbi" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: gray;font-weight:700">SQL</div>                
+                <div class="html"  style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: black;font-weight:700">HTML</div>
+                <div class="css" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: black;font-weight:700">CSS</div>
+                <div class="java" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: black;font-weight:700">JavaScript</div>
+                <div class="java" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: black;font-weight:700">BootStrap</div>
+                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: black;font-weight:700">ReactJS</div>
+                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;color: black;font-weight:700">MERN Stack</div>
+                <div class="canva" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: black;font-weight:700">NodeJS</div>
+                <div class="canva" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: black;font-weight:700">MongoDB</div>
+                <div class="python" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; color: black;font-weight:700">Java</div>
+                <div class="sql" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: black;font-weight:700">Python</div>
+                <div class="powerbi" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: black;font-weight:700">GitHub</div>                
+                <div class="powerbi" style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px;  color: black;font-weight:700">SQL</div>                
             </div>
         </div>
     </div>
-
 
     <div class="education-section" id="education">
-        <h1 class="education_heading">EDUCATION</h1>
-        <div class="education-item graduation">
-            <div class="education_inner_section">
-                <h3>Siddhartha Institute of Engineering and Technology</h3>
-                <h3 class="year">2025</h3>
-            </div>
-            <p>B.Tech in CSE Data Science, <strong>Grade - A</strong></p>
-        </div>
-        
-        <div class="education-item intermediate">
-            <div class="education_inner_section">
-                <h3>Sravanthi Junior College</h3>
-                <h3 class="year">2021</h3>
-            </div>
-            <p>MPC, <strong>91%</strong></p>
-        </div>
-        
-        <div class="education-item schooling">
-            <div class="education_inner_section">
-                <h3>Gandhi Memorial High School</h3>
-                <h3 class="year">2019</h3>
-            </div>
-            <p>SSC, <strong>9.2 CGPA</strong></p>
-        </div>
+    <h1 style="text-align: center;">🎓EDUCATION </h1>
+    <div class="edu-card">
+      <h3>Bachelor of Technology (B.Tech) in Computer Science and Engineering (Data Science)</h3>
+      <p class="college">Siddhartha Institute of Engineering and Technology, Hyderabad</p>
+      <p class="duration">Expected Graduation: 2025 | Affiliated to JNTU Hyderabad</p>
+      <ul>
+        <li>Specialized in Data Science with a focus on <strong>Java Full Stack Development</strong></li>
+        <li>Built practical experience through academic projects like predicting and detecting software vulnerabilities using ML.</li>
+        <li>Proficient in front-end development using <strong>HTML, CSS, JavaScript, and ReactJS</strong>. Familiar with <strong>full-stack MERN applications.</strong></li>
+        <li>Developed live projects such as <strong>a personal portfolio</strong>, <strong>a weather forecasting app</strong>, and e-book website using responsive design principles.</li>
+        <li>Completed an internship at <strong>EDUTECH ACADEMOR</strong>, enhancing industry-level skills in frontend development.</li>
+        <li>Earned certifications in <strong>Artificial Intelligence, SQL, Python, and Responsive Web Design</strong> to complement academic learning.</li>
+    </ul>
     </div>
+  </div>   
 
 
 
     <div class="projects" id="projects">
-        <h1 class="projects_h1">PROJECTS</h1>
+        <h1 class="projects_h1">🛠️PROJECTS</h1>
         <hr width="30px" style="height: 4px; background-color:rgb(0, 89, 255); border-radius:30px">
         <p class="about_me_para">Below are my works which I've made using front-end technologies like HTML and CSS.</p>
     </div>
@@ -836,7 +860,7 @@
 
     <div class="contact" id="contact" style="padding-top: 120px;">
         <div class="contact_heading">
-        <h1 style="font-size: 40px;">CONTACT</h1>
+        <h1 style="font-size: 40px;">📬CONTACT</h1>
         <hr width="30px" style="height: 4px; background-color:rgb(255, 255, 255); border-radius:30px">
         <p style="margin: 15px;">You can send me your message via <strong>📩E-mail</strong> using the below form...</p>
         </div>
